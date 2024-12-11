@@ -82,7 +82,7 @@ impl NoirRunner {
     /// - The input values cannot be encoded.
     /// - The program fails to execute.
     /// - The output value cannot be decoded.
-    /// 
+    ///
     /// Note that if execution itself fails, we use nargo's diagnostic system to attempt to diagnose
     /// the error.
     pub fn run(

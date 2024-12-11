@@ -1,6 +1,6 @@
-use noir_runner::NoirRunner;
-use noir_runner::InputValue;
 use noir_runner::FieldElement;
+use noir_runner::InputValue;
+use noir_runner::NoirRunner;
 
 use std::collections::BTreeMap;
 

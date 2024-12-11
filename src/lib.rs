@@ -5,10 +5,10 @@
 //! with `v0.36.0`.
 //!
 //! ## Example
-//! 
+//!
 //! ```noir
 //! // noir circuit
-//! 
+//!
 //! #[export]
 //! fn addition(x: Field, y: Field) -> Field {
 //!     x + y
@@ -17,7 +17,7 @@
 //!
 //! ```rust
 //! // rust program
-//! 
+//!
 //! use noir_runner::{NoirRunner, InputValue, FieldElement};
 //!
 //! use std::collections::BTreeMap;
@@ -38,9 +38,9 @@
 //!
 //! assert_eq!(result, InputValue::Field(x + y));
 //! ```
-//! 
+//!
 //! ## Re Exports
-//! 
+//!
 //! - [`FieldElement`]: (`acvm`) Represents a field element in the BN254 curve.
 //! - [`InputValue`]: (`noirc_abi`) Represents a value that can be passed as an input to a Noir program.
 
@@ -48,6 +48,6 @@ mod error;
 mod runner;
 
 pub use acvm::FieldElement;
-pub use noirc_abi::input_parser::InputValue;
 pub use error::Error;
+pub use noirc_abi::input_parser::InputValue;
 pub use runner::NoirRunner;
