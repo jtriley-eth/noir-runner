@@ -1,0 +1,8 @@
+[package]
+name = "tests"
+type = "lib"
+authors = ["jtriley-eth"]
+
+entry = "circuits/lib.nr"
+
+[dependencies]

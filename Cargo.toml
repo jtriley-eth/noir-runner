@@ -1,0 +1,15 @@
+[package]
+name = "noir-runner"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+serde = "1.0.216"
+serde_json = "1.0.133"
+acvm = { git = "https://github.com/noir-lang/noir", tag = "v0.36.0" }
+nargo = { git = "https://github.com/noir-lang/noir", tag = "v0.36.0" }
+noirc_abi = { git = "https://github.com/noir-lang/noir", tag = "v0.36.0" }
+nargo_toml = { git = "https://github.com/noir-lang/noir", tag = "v0.36.0" }
+noirc_driver = { git = "https://github.com/noir-lang/noir", tag = "v0.36.0" }
+noirc_artifacts = { git = "https://github.com/noir-lang/noir", tag = "v0.36.0" }
+bn254_blackbox_solver = { git = "https://github.com/noir-lang/noir", tag = "v0.36.0" }
