@@ -6,18 +6,24 @@
 //!
 //! ## Example
 //!
+//! Noir Circuit:
+//! 
 //! ```noir
-//! // noir circuit
-//!
 //! #[export]
 //! fn addition(x: Field, y: Field) -> Field {
 //!     x + y
 //! }
 //! ```
+//! 
+//! Bash Command:
+//! 
+//! ```bash
+//! nargo export
+//! ```
+//! 
+//! Rust Program:
 //!
 //! ```rust
-//! // rust program
-//!
 //! use noir_runner::{NoirRunner, InputValue, FieldElement};
 //!
 //! use std::collections::BTreeMap;
