@@ -5,8 +5,19 @@
 //! with `v0.36.0`.
 //!
 //! ## Example
+//! 
+//! ```noir
+//! // noir circuit
+//! 
+//! #[export]
+//! fn addition(x: Field, y: Field) -> Field {
+//!     x + y
+//! }
+//! ```
 //!
 //! ```rust
+//! // rust program
+//! 
 //! use noir_runner::{NoirRunner, InputValue, FieldElement};
 //!
 //! use std::collections::BTreeMap;
