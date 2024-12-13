@@ -24,7 +24,7 @@
 //! Rust Program:
 //!
 //! ```rust
-//! use noir_runner::{NoirRunner, InputValue, FieldElement};
+//! use noir_runner::{NoirRunner, ToNoir};
 //!
 //! use std::collections::BTreeMap;
 //!
@@ -32,12 +32,12 @@
 //!
 //! let runner = NoirRunner::try_new(program_dir).unwrap();
 //!
-//! let x = 2i128.to_noir()
-//! let y = 3i128.to_noir();
+//! let x = 2i128;
+//! let y = 3i128;
 //!
 //! let input_map = BTreeMap::from([
-//!     ("x".to_owned(), x),
-//!     ("y".to_owned(), y),
+//!     ("x".to_owned(), x.to_noir()),
+//!     ("y".to_owned(), y.to_noir()),
 //! ]);
 //!
 //! let result = runner.run("addition", input_map).unwrap().unwrap();
