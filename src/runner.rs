@@ -41,7 +41,7 @@ impl NoirRunner {
     ///
     /// ## Example
     ///
-    /// ```rust
+    /// ```no_run
     /// use noir_runner::NoirRunner;
     ///
     /// let program_dir = std::path::PathBuf::from("my_noir_project");
