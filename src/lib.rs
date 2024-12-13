@@ -32,17 +32,17 @@
 //!
 //! let runner = NoirRunner::try_new(program_dir).unwrap();
 //!
-//! let x = FieldElement::from(2i128);
-//! let y = FieldElement::from(3i128);
+//! let x = 2i128.to_noir()
+//! let y = 3i128.to_noir();
 //!
 //! let input_map = BTreeMap::from([
-//!     ("x".to_owned(), InputValue::Field(x)),
-//!     ("y".to_owned(), InputValue::Field(y)),
+//!     ("x".to_owned(), x),
+//!     ("y".to_owned(), y),
 //! ]);
 //!
 //! let result = runner.run("addition", input_map).unwrap().unwrap();
 //!
-//! assert_eq!(result, InputValue::Field(x + y));
+//! assert_eq!(result, (x + y).to_noir());
 //! ```
 //!
 //! ## Re Exports
