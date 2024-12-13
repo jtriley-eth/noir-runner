@@ -79,8 +79,8 @@ mod tests {
 
     #[test]
     fn test_bool() {
-        let a = serde_json::to_value(true).unwrap();
-        let b = serde_json::to_value(false).unwrap();
+        let a = true;
+        let b = false;
 
         let input_value_a = ToNoir::to_noir(a);
         let input_value_b = ToNoir::to_noir(b);
@@ -91,9 +91,9 @@ mod tests {
 
     #[test]
     fn test_number() {
-        let a = serde_json::to_value(1u64).unwrap();
-        let b = serde_json::to_value(1.0).unwrap();
-        let c = serde_json::to_value(1i64).unwrap();
+        let a = 1u64;
+        let b = 1.0;
+        let c = 1i64;
 
         let input_value_a = ToNoir::to_noir(a);
         let input_value_b = ToNoir::to_noir(b);
@@ -106,7 +106,7 @@ mod tests {
 
     #[test]
     fn test_array() {
-        let a = serde_json::to_value(vec![1u64, 1u64, 1u64]).unwrap();
+        let a = vec![1u64, 1u64, 1u64];
 
         let input_value = ToNoir::to_noir(a);
 
@@ -122,7 +122,7 @@ mod tests {
 
     #[test]
     fn test_string() {
-        let a = serde_json::Value::String("hello".to_string());
+        let a = "hello".to_string();
 
         let input_value = ToNoir::to_noir(a);
 
@@ -137,11 +137,10 @@ mod tests {
             b: String,
         }
 
-        let a = serde_json::to_value(Test {
+        let a = Test {
             a: 1,
             b: "hello".to_string(),
-        })
-        .unwrap();
+        };
 
         let input_value = ToNoir::to_noir(a);
 
@@ -151,5 +150,21 @@ mod tests {
         ]);
 
         assert_eq!(input_value, InputValue::Struct(map));
+    }
+
+    #[test]
+    fn test_bytes() {
+        let a = [1u8, 2u8, 3u8];
+
+        let input_value = ToNoir::to_noir(a);
+
+        assert_eq!(
+            input_value,
+            InputValue::Vec(vec![
+                InputValue::Field(1u32.into()),
+                InputValue::Field(2u32.into()),
+                InputValue::Field(3u32.into()),
+            ])
+        );
     }
 }
