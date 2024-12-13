@@ -7,20 +7,20 @@
 //! ## Example
 //!
 //! Noir Circuit:
-//! 
+//!
 //! ```noir
 //! #[export]
 //! fn addition(x: Field, y: Field) -> Field {
 //!     x + y
 //! }
 //! ```
-//! 
+//!
 //! Bash Command:
-//! 
+//!
 //! ```bash
 //! nargo export
 //! ```
-//! 
+//!
 //! Rust Program:
 //!
 //! ```rust
@@ -50,10 +50,10 @@
 //! - [`FieldElement`]: (`acvm`) Represents a field element in the BN254 curve.
 //! - [`InputValue`]: (`noirc_abi`) Represents a value that can be passed as an input to a Noir program.
 
+mod abi;
 mod error;
 mod runner;
 
-pub use acvm::FieldElement;
+pub use abi::{FieldElement, InputValue, ToNoir};
 pub use error::Error;
-pub use noirc_abi::input_parser::InputValue;
 pub use runner::NoirRunner;
